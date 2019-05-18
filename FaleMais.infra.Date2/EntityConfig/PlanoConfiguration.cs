@@ -1,5 +1,5 @@
 ﻿
-using FaleMais.Domain.Entities;
+using FaleMais.Domain.Interfaces;
 using System.Data.Entity.ModelConfiguration;
 
 namespace FaleMais.infra.Date2.EntityConfig
