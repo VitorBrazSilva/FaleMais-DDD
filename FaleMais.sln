@@ -19,11 +19,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2 - CrossCuting", "4.2 - 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaleMais.MVC", "FaleMais.MVC\FaleMais.MVC.csproj", "{FD08E368-56C7-4A04-8A94-D3042373FF2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaleMais.Domain", "FaleMais.Domain\FaleMais.Domain.csproj", "{7BE83D35-2978-4777-9FA1-DEA986B34BDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FaleMais.Domain", "FaleMais.Domain\FaleMais.Domain.csproj", "{7BE83D35-2978-4777-9FA1-DEA986B34BDB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaleMais.Infra.Data", "FaleMais.Infra.Data\FaleMais.Infra.Data.csproj", "{0D0A5B4D-3BC7-40AA-BED0-894D237490A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FaleMais.Infra.Data", "FaleMais.Infra.Data\FaleMais.Infra.Data.csproj", "{0D0A5B4D-3BC7-40AA-BED0-894D237490A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaleMais.Application", "FaleMais.Application\FaleMais.Application.csproj", "{3B2876FD-1C26-4338-9AC9-206AF39B17D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FaleMais.Application", "FaleMais.Application\FaleMais.Application.csproj", "{3B2876FD-1C26-4338-9AC9-206AF39B17D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
