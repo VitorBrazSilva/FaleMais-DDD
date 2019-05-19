@@ -1,7 +1,8 @@
-﻿using FaleMais.Domain.Interfaces;
+﻿using FaleMais.Domain.Entites;
 using FaleMais.infra.Date2.EntityConfig;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using SqlProviderServices = System.Data.Entity.SqlServer.SqlProviderServices;
 
 namespace FaleMais.Infra.Data.Context
 {

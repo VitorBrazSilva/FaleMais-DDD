@@ -1,4 +1,6 @@
-﻿namespace FaleMais.Domain.Interfaces
+﻿using System.Linq;
+
+namespace FaleMais.Domain.Entites    
 {
     public class Tarifa
     {
@@ -6,5 +8,6 @@
         public int Origem { get; set; }
         public int Destino { get; set; }
         public double ValorMin { get; set; }
+    
     }
 }

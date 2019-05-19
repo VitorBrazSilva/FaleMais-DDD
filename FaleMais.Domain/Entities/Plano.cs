@@ -1,5 +1,5 @@
 ﻿
-namespace FaleMais.Domain.Interfaces
+namespace FaleMais.Domain.Entites
 {
     public class Plano
     {  

@@ -127,10 +127,12 @@
     <Compile Include="AutoMapper\DomainToViewModelIMappingProfile.cs" />
     <Compile Include="AutoMapper\ViewModelToDomainIMappingProfile.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TarifaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\PlanoViewModel.cs" />
     <Compile Include="ViewModels\TarifaViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -155,6 +157,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\Tarifa\index.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -169,6 +172,7 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Tarifa\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -190,6 +194,10 @@
     <ProjectReference Include="..\FaleMais.Domain\FaleMais.Domain.csproj">
       <Project>{7be83d35-2978-4777-9fa1-dea986b34bdb}</Project>
       <Name>FaleMais.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FaleMais.infra.Date2\FaleMais.infra.Date2.csproj">
+      <Project>{4bdc6664-3b7a-4089-b7f3-c0123b68fa4f}</Project>
+      <Name>FaleMais.infra.Date2</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

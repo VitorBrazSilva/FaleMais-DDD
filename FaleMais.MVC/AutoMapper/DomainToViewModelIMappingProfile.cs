@@ -1,7 +1,7 @@
 ﻿
 
 using AutoMapper;
-using FaleMais.Domain.Interfaces;
+using FaleMais.Domain.Entites;
 using FaleMais.MVC.ViewModels;
 
 namespace FaleMais.MVC.AutoMapper

@@ -1,0 +1,22 @@
+﻿@model IEnumerable<FaleMais.MVC.ViewModels.TarifaViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+@Html.DropDownList(
+   "ddd_origem",
+   new SelectList(
+       Model.Select(x => new { Value = x.Origem, Text = "DDD " + x.Origem }).Distinct(),
+       "Value",
+       "Text"
+   ),
+   new { onchange = "GetOrigem(this.value);" }
+)
+
+<select name="ddd_destino" id="ddd_destino"></select>
+
+@Html.DropDownList("accountid", new SelectList(ViewBag.Plano, "Tempo", "Nome"))

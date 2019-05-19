@@ -1,7 +1,10 @@
 ﻿
+using FaleMais.Domain.Entites;
+
 namespace FaleMais.Domain.Interfaces
 {
-    interface IPlanoRepository : IRepositoryBase<Plano>
+    public interface IPlanoRepository : IRepositoryBase<Plano>
     {
+
     }
 }
