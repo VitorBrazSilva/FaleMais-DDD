@@ -1,22 +1,51 @@
 ﻿@model IEnumerable<FaleMais.MVC.ViewModels.TarifaViewModel>
 
-@{
-    ViewBag.Title = "Index";
-}
 
-<h2>Index</h2>
+    <div class="content-page" id="faleMais">
+        <section id="planos">
+            <div class="header">
+                <div class="numero">1</div>
+                <div class="titulo">
+                    <h5>Fale Mais</h5>
+                    <p>Faça cálculo do valor de suas ligações</p>
+                </div>
+            </div>
+            <div class="body">
+                <div class="row">
+                    <div class="col-6 col-md-6 form-group">
+                        <label for="ddd_origem">DDD Origem</label>
+                        @Html.DropDownList(
+                            "ddd_origem",
+                            new SelectList(
+                                Model.Select(x => new { Value = x.Origem, Text = "DDD " + x.Origem }).Distinct(),
+                                "Value",
+                                "Text"
+                            ),
+                            new { onchange = "GetOrigem(this.value);", @class = "form-control form-control-lg" }
+                        )
+                    </div>
+                    <div class="col-6 col-md-6 form-group">
+                        <label for="ddd_destino">DDD Destino</label>
+                        <select name="ddd_destino" id="ddd_destino" class="form-control form-control-lg" required></select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 col-md-6 form-group">
+                        <label for="plano">Plano utilizado</label>
+                        @Html.DropDownList("accountid", new SelectList(ViewBag.Plano, "Tempo", "Nome"), new { @class = "form-control form-control-lg" })
+                    </div>
+                    <div class="col-4 col-md-4 form-group">
+                        <label for="tempo_ligacao">Tempo de ligação</label>
+                        <input type="number" name="tempo_ligacao" id="tempo_ligacao" class="form-control form-control-lg" required>                      
+                    </div>
+                    <div class="col-2 col-md-2 form-group">
+                        <input type="button" class="btn btn-success btn-lg shadow btn-color-main" value="Calcular"><br>
+                    </div>
+                </div>
+            </div>
+        </section>      
+    </div>
 
 
-@Html.DropDownList(
-   "ddd_origem",
-   new SelectList(
-       Model.Select(x => new { Value = x.Origem, Text = "DDD " + x.Origem }).Distinct(),
-       "Value",
-       "Text"
-   ),
-   new { onchange = "GetOrigem(this.value);" }
-)
 
-<select name="ddd_destino" id="ddd_destino"></select>
 
-@Html.DropDownList("accountid", new SelectList(ViewBag.Plano, "Tempo", "Nome"))
