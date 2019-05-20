@@ -13,10 +13,8 @@ namespace FaleMais.MVC.Controllers
         private readonly TarifaRepository _TarifaRepository = new TarifaRepository();
         public ActionResult Index()
         {
-           var tarifa = Mapper.Map<IEnumerable<Tarifa>, IEnumerable<TarifaViewModel>>(_TarifaRepository.GetAll());
-            //ViewBag.Origem = tarifa.Select(x => x.Origem).Distinct();
-                        
-            return View(tarifa);
+    
+            return View();
             
         }
 

@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FaleMais.Application", "Fal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaleMais.infra.Date2", "FaleMais.infra.Date2\FaleMais.infra.Date2.csproj", "{4BDC6664-3B7A-4089-B7F3-C0123B68FA4F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaleMais.Domain.Test", "FaleMais.Domain.Test\FaleMais.Domain.Test.csproj", "{31CAF865-25B4-4A81-9604-7B1DC850B04F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{4BDC6664-3B7A-4089-B7F3-C0123B68FA4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BDC6664-3B7A-4089-B7F3-C0123B68FA4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4BDC6664-3B7A-4089-B7F3-C0123B68FA4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31CAF865-25B4-4A81-9604-7B1DC850B04F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31CAF865-25B4-4A81-9604-7B1DC850B04F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31CAF865-25B4-4A81-9604-7B1DC850B04F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31CAF865-25B4-4A81-9604-7B1DC850B04F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +64,7 @@ Global
 		{7BE83D35-2978-4777-9FA1-DEA986B34BDB} = {2E466CC7-0505-4F75-B6FB-9D95D82EE704}
 		{3B2876FD-1C26-4338-9AC9-206AF39B17D5} = {5EE72B65-8160-4382-89E4-EECACA26DE4F}
 		{4BDC6664-3B7A-4089-B7F3-C0123B68FA4F} = {5E15F846-8F52-4C6E-A217-E0AF835B2AC3}
+		{31CAF865-25B4-4A81-9604-7B1DC850B04F} = {2E466CC7-0505-4F75-B6FB-9D95D82EE704}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E13FE837-F42F-4784-AD28-B3E23032752D}
