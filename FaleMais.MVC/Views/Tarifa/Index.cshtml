@@ -7,7 +7,7 @@
                 <div class="numero">1</div>
                 <div class="titulo">
                     <h5>Fale Mais</h5>
-                    <p>Faça cálculo do valor de suas ligações</p>
+                    <p>Faça cálculo o do valor de suas ligações</p>
                 </div>
             </div>
             <div class="body">
@@ -32,16 +32,22 @@
                 <div class="row">
                     <div class="col-6 col-md-6 form-group">
                         <label for="plano">Plano utilizado</label>
-                        @Html.DropDownList("accountid", new SelectList(ViewBag.Plano, "Tempo", "Nome"), new { @class = "form-control form-control-lg" })
+                        @Html.DropDownList("plano", new SelectList(ViewBag.Plano, "Tempo", "Nome"), new { @class = "form-control form-control-lg" })
                     </div>
-                    <div class="col-4 col-md-4 form-group">
+                    <div class="col-6 col-md-6 form-group">
                         <label for="tempo_ligacao">Tempo de ligação</label>
-                        <input type="number" name="tempo_ligacao" id="tempo_ligacao" class="form-control form-control-lg" required>                      
-                    </div>
-                    <div class="col-2 col-md-2 form-group">
-                        <input type="button" class="btn btn-success btn-lg shadow btn-color-main" value="Calcular"><br>
+                        <input type="number" name="tempo_ligacao" id="tempo_ligacao" class="form-control form-control-lg" required>
                     </div>
                 </div>
+                <div class="row">   
+                    <div class="col-6 col-md-6 form-group">
+                        
+                    </div>
+                    <div class="col-6 col-md-6 form-group">
+                        <input type="button" class="btn btn-success btn-lg shadow btn-color-main btn-block" onclick="Calcular();" value="Calcular"><br>
+                    </div>
+                </div>
+                <div id="resultCalculo"></div>
             </div>
         </section>      
     </div>

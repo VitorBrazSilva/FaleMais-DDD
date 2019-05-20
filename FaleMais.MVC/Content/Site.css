@@ -86,7 +86,7 @@ textarea {
     }
 
 #faleMais .btn {
-    border-radius: 1.5rem;
+    border-radius: 1.5rem;    
 }
 
 #faleMais .btn-color-main {
@@ -95,4 +95,28 @@ textarea {
     border-color: steelblue;
     -webkit-box-shadow: 0 2px 6px 0 rgba(70, 130, 180, 0.5);
     box-shadow: 0 2px 6px 0 rgba(70, 130, 180, 0.5);
+}
+
+#resultCalculo {
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.table {
+    margin-bottom: 0px;
+}
+
+.table .thead-dark th {
+    color: #fff;
+    background-color: #e0650a;
+    border-color: #e0650a;
+    font-style: italic;
+}
+.table tbody td {
+    color: #fff;
+    background-color: #e0650a;
+    border-color: #e0650a;
+    text-align: center;
+    font-style: italic;
 }

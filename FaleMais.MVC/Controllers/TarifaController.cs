@@ -13,25 +13,48 @@ namespace FaleMais.MVC.Controllers
 {
     public class TarifaController : Controller
     {
-        private readonly TarifaRepository _TarifaRepository = new TarifaRepository();
-        private readonly PlanoRepository _PlanoRepository = new PlanoRepository();
+        private readonly TarifaRepository _tarifaRepository = new TarifaRepository();
+        private readonly PlanoRepository _planoRepository = new PlanoRepository();
         // GET: Tarifa
         public ActionResult Index()
         {
-            var tarifa = Mapper.Map<IEnumerable<Tarifa>, IEnumerable<TarifaViewModel>>(_TarifaRepository.GetAll());
+            var tarifa = Mapper.Map<IEnumerable<Tarifa>, IEnumerable<TarifaViewModel>>(_tarifaRepository.GetAll());
 
-            ViewBag.Plano = Mapper.Map<IEnumerable<Plano>, IEnumerable<PlanoViewModel>>(_PlanoRepository.GetAll());
+            ViewBag.Plano = Mapper.Map<IEnumerable<Plano>, IEnumerable<PlanoViewModel>>(_planoRepository.GetAll());
 
             return View(tarifa);
         }
 
         public JsonResult GetDestino(int dddOrigem)
         {
-            var tarifa = Mapper.Map<IEnumerable<Tarifa>, IEnumerable<TarifaViewModel>>(_TarifaRepository.GetAll());
-            var tarifaFiltro = tarifa.Where(x => x.Origem == dddOrigem);
-            var destino  = tarifaFiltro.Select(x => x.Destino);
-            return Json(destino, JsonRequestBehavior.AllowGet);
-        }       
+            int[] destinos = _tarifaRepository.ObterDestinos(dddOrigem).ToArray();
+
+            if (destinos.Count() == 0)
+                return Json("Nenhum destino encontrado com a origem selecionada!", JsonRequestBehavior.AllowGet);
+
+            return Json(destinos, JsonRequestBehavior.AllowGet);
+        }
+
+        public JsonResult Calcular(int origem, int destino, int tempoPlano, int tempoGasto)
+        {
+
+            double valorComPlano = _planoRepository.CalcularValorComPlano(origem, destino, tempoPlano, tempoGasto);
+            double valorSemPlano = _planoRepository.CalcularValorSemPlano(origem, destino, tempoGasto);
+
+
+            CalcularTarifaViewModel t = new CalcularTarifaViewModel()
+            {
+                Origem = origem,
+                Destino = destino,
+                Plano = "Fale Mais" + tempoPlano,
+                Tempo = tempoGasto,
+                CalculoComPlano = valorComPlano,
+                CalculoSemPlano = valorSemPlano
+            };
+
+
+            return Json(t, JsonRequestBehavior.AllowGet);
+        }
 
     }
 }
